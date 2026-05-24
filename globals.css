@@ -1,0 +1,283 @@
+
+:root {
+  --bg: #08111f;
+  --panel: #0f1b2f;
+  --panel-2: #13233d;
+  --text: #f8fbff;
+  --muted: #b9c5d8;
+  --brand: #4f7cff;
+  --brand-2: #30d5c8;
+  --line: rgba(255,255,255,.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(48,213,200,.16), transparent 32rem),
+    radial-gradient(circle at top right, rgba(79,124,255,.22), transparent 34rem),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.nav {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.logo span {
+  color: var(--brand-2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.nav-links a {
+  text-decoration: none;
+}
+
+.hero {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 92px 0 72px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  color: #d8fff9;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 22px 0 20px;
+  font-size: clamp(44px, 7vw, 78px);
+  line-height: .94;
+  letter-spacing: -0.07em;
+}
+
+.lead {
+  margin: 0 0 34px;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.65;
+  max-width: 710px;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 54px;
+  padding: 0 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 800;
+  border: 1px solid var(--line);
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--brand), #7c5cff);
+  border: none;
+}
+
+.secondary {
+  background: rgba(255,255,255,.05);
+}
+
+.microcopy {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.28);
+}
+
+.packet {
+  display: grid;
+  gap: 14px;
+}
+
+.packet-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--line);
+  background: rgba(8,17,31,.58);
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.packet-row strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.status {
+  color: var(--brand-2);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.section h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: -0.05em;
+  margin: 0 0 18px;
+}
+
+.section-copy {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 760px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.feature {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.feature h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.feature p {
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.price-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 26px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  margin: 12px 0;
+}
+
+.price span {
+  font-size: 15px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.list {
+  color: var(--muted);
+  line-height: 1.9;
+  padding-left: 18px;
+}
+
+.final {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  padding: 28px 0;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 56px;
+  }
+
+  .grid,
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+}

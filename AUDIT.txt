@@ -1,0 +1,10 @@
+TitleFlow Vercel Project Audit
+
+[OK] package.json
+[OK] app/page.jsx
+[OK] app/layout.jsx
+[OK] app/globals.css
+[OK] next.config.js
+[OK] vercel.json
+
+Zip is packaged with files at repository root. Upload contents directly to GitHub root.
